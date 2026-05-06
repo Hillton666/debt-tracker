@@ -8,65 +8,40 @@
 <meta name="apple-mobile-web-app-title" content="Debt Tracker">
 <meta name="theme-color" content="#0f0f0f">
 <title>Debt Tracker</title>
-
 <link rel="apple-touch-icon" href="data:image/png;base64,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">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #0f0f0f;
-  --bg2: #1a1a1a;
-  --bg3: #242424;
-  --bg4: #2e2e2e;
-  --line: rgba(255,255,255,0.08);
-  --line2: rgba(255,255,255,0.14);
-  --text: #f0ede8;
-  --text2: #888880;
-  --text3: #555550;
-  --accent: #c8f045;
-  --accent2: #a8d035;
-  --red: #ff5f57;
-  --orange: #ffb340;
-  --blue: #5eb5f7;
-  --green: #3dd68c;
-  --r: 14px;
-  --r-sm: 8px;
-  --safe-top: env(safe-area-inset-top, 0px);
-  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --bg: #0f0f0f; --bg2: #1a1a1a; --bg3: #242424; --bg4: #2e2e2e;
+  --line: rgba(255,255,255,0.08); --line2: rgba(255,255,255,0.14);
+  --text: #f0ede8; --text2: #888880; --text3: #555550;
+  --accent: #c8f045; --red: #ff5f57; --orange: #ffb340; --blue: #5eb5f7; --green: #3dd68c;
+  --purple: #b084f5;
+  --r: 14px; --r-sm: 8px;
+  --safe-top: env(safe-area-inset-top, 0px); --safe-bottom: env(safe-area-inset-bottom, 0px);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 html, body { height: 100%; overflow: hidden; background: var(--bg); font-family: 'DM Sans', sans-serif; color: var(--text); }
-
-/* Layout */
 #app { display: flex; flex-direction: column; height: 100%; padding-top: var(--safe-top); }
 .topbar { flex-shrink: 0; padding: 18px 20px 14px; display: flex; align-items: center; justify-content: space-between; }
 .topbar-title { font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text2); }
 .topbar-date { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text3); }
 .scroll-area { flex: 1; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; padding: 0 16px; padding-bottom: calc(100px + var(--safe-bottom)); }
-
-/* Bottom nav */
 .bottom-nav { flex-shrink: 0; background: var(--bg2); border-top: 1px solid var(--line); display: flex; padding-bottom: var(--safe-bottom); }
 .nav-btn { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 10px 0 8px; background: none; border: none; color: var(--text3); font-size: 9px; font-family: 'DM Sans', sans-serif; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: color 0.15s; }
 .nav-btn svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .nav-btn.active { color: var(--accent); }
-
-/* Summary strip */
 .summary-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
 .summary-strip.three { grid-template-columns: 1fr 1fr 1fr; }
 .sum-card { background: var(--bg2); border-radius: var(--r); padding: 14px 14px 12px; border: 1px solid var(--line); }
 .sum-label { font-size: 10px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text3); margin-bottom: 6px; }
 .sum-value { font-family: 'DM Mono', monospace; font-size: 17px; font-weight: 400; color: var(--text); line-height: 1.1; }
-.sum-value.red { color: var(--red); }
-.sum-value.green { color: var(--green); }
-.sum-value.accent { color: var(--accent); }
-
-/* Section header */
+.sum-value.red { color: var(--red); } .sum-value.green { color: var(--green); } .sum-value.accent { color: var(--accent); } .sum-value.purple { color: var(--purple); }
 .section-hd { display: flex; align-items: center; justify-content: space-between; margin: 20px 0 10px; }
 .section-hd h2 { font-size: 11px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text3); }
 .add-btn { display: flex; align-items: center; gap: 5px; background: var(--accent); color: #0f0f0f; border: none; border-radius: 20px; padding: 6px 14px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600; cursor: pointer; }
-
-/* Debt card */
 .debt-card { background: var(--bg2); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; margin-bottom: 10px; }
 .dc-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 12px; }
 .dc-name { font-size: 15px; font-weight: 500; color: var(--text); }
@@ -79,66 +54,56 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); font-family:
 .dc-progress { margin-bottom: 10px; }
 .progress-track { height: 4px; background: var(--bg4); border-radius: 99px; overflow: hidden; margin-bottom: 5px; }
 .progress-fill { height: 100%; border-radius: 99px; background: var(--accent); transition: width 0.4s ease; }
-.progress-fill.warn { background: var(--orange); }
-.progress-fill.low { background: var(--red); }
+.progress-fill.warn { background: var(--orange); } .progress-fill.low { background: var(--red); }
 .dc-meta { display: flex; gap: 14px; font-size: 11px; color: var(--text2); font-family: 'DM Mono', monospace; }
-.dc-meta span { display: flex; align-items: center; gap: 4px; }
 .dc-actions { display: flex; gap: 8px; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); }
 .dc-btn { flex: 1; padding: 9px; border-radius: var(--r-sm); font-size: 12px; font-weight: 500; font-family: 'DM Sans', sans-serif; border: 1px solid var(--line2); background: transparent; color: var(--text2); cursor: pointer; text-align: center; }
 .dc-btn.primary { background: var(--accent); color: #0f0f0f; border-color: transparent; }
 .dc-btn.danger { color: var(--red); border-color: rgba(255,95,87,0.2); }
-
-/* Progress pct label */
 .progress-labels { display: flex; justify-content: space-between; font-size: 10px; font-family: 'DM Mono', monospace; color: var(--text3); }
-
-/* Empty state */
 .empty { text-align: center; padding: 40px 20px; color: var(--text3); }
 .empty svg { width: 48px; height: 48px; stroke: var(--text3); fill: none; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 12px; }
 .empty p { font-size: 14px; color: var(--text2); margin-bottom: 6px; }
 .empty small { font-size: 12px; }
-
-/* History list */
 .hist-item { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--line); }
 .hist-item:last-child { border-bottom: none; }
 .hist-left { display: flex; flex-direction: column; gap: 3px; }
 .hist-name { font-size: 14px; color: var(--text); }
 .hist-date { font-size: 11px; font-family: 'DM Mono', monospace; color: var(--text3); }
 .hist-amount { font-family: 'DM Mono', monospace; font-size: 14px; color: var(--green); }
-
-/* Budget */
 .budget-income-card { background: var(--bg2); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .budget-income-card label { font-size: 13px; color: var(--text2); flex: 1; }
 .income-input-wrap { display: flex; align-items: center; gap: 4px; background: var(--bg3); border-radius: var(--r-sm); padding: 0 12px; border: 1px solid var(--line2); }
 .income-input-wrap span { font-size: 13px; color: var(--text3); font-family: 'DM Mono', monospace; }
 .income-input-wrap input { background: none; border: none; outline: none; font-size: 15px; font-family: 'DM Mono', monospace; color: var(--text); width: 110px; padding: 10px 0; text-align: right; -moz-appearance: textfield; }
 .income-input-wrap input::-webkit-outer-spin-button, .income-input-wrap input::-webkit-inner-spin-button { -webkit-appearance: none; }
-
 .budget-card { background: var(--bg2); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; margin-bottom: 12px; }
 .budget-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
 .budget-row:last-child { border-bottom: none; }
 .budget-row .label { color: var(--text2); }
 .budget-row .val { font-family: 'DM Mono', monospace; font-size: 13px; }
-.budget-row .val.red { color: var(--red); }
-.budget-row .val.green { color: var(--green); }
-.budget-row .val.accent { color: var(--accent); }
+.budget-row .val.red { color: var(--red); } .budget-row .val.green { color: var(--green); } .budget-row .val.accent { color: var(--accent); } .budget-row .val.purple { color: var(--purple); }
 .budget-bar-wrap { height: 8px; background: var(--bg4); border-radius: 99px; overflow: hidden; display: flex; margin: 14px 0 8px; }
 .budget-bar-seg { height: 100%; }
 .budget-legend { display: flex; gap: 14px; flex-wrap: wrap; }
 .legend-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--text2); font-family: 'DM Mono', monospace; }
 .legend-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-.dti-status { margin-top: 12px; padding: 10px 12px; border-radius: var(--r-sm); font-size: 12px; display: flex; align-items: center; gap: 8px; }
+.dti-status { margin-top: 12px; padding: 10px 12px; border-radius: var(--r-sm); font-size: 12px; }
 .dti-status.good { background: rgba(61,214,140,0.1); color: var(--green); border: 1px solid rgba(61,214,140,0.2); }
 .dti-status.warn { background: rgba(255,179,64,0.1); color: var(--orange); border: 1px solid rgba(255,179,64,0.2); }
 .dti-status.bad { background: rgba(255,95,87,0.1); color: var(--red); border: 1px solid rgba(255,95,87,0.2); }
-
-/* Install banner */
 .install-banner { margin-bottom: 14px; background: rgba(200,240,69,0.07); border: 1px solid rgba(200,240,69,0.2); border-radius: var(--r); padding: 12px 14px; display: flex; align-items: center; gap: 10px; cursor: pointer; }
 .install-banner svg { flex-shrink: 0; width: 20px; height: 20px; stroke: var(--accent); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .install-banner-text { flex: 1; font-size: 12px; color: var(--text2); line-height: 1.4; }
 .install-banner-text strong { color: var(--accent); display: block; font-size: 13px; margin-bottom: 1px; }
 .install-banner-x { font-size: 18px; color: var(--text3); padding: 4px; }
-
-/* Modal / sheet */
+/* Update banner */
+.update-banner { display: none; margin-bottom: 14px; background: rgba(94,181,247,0.08); border: 1px solid rgba(94,181,247,0.25); border-radius: var(--r); padding: 12px 14px; align-items: center; gap: 10px; cursor: pointer; }
+.update-banner.show { display: flex; }
+.update-banner svg { flex-shrink: 0; width: 20px; height: 20px; stroke: var(--blue); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.update-banner strong { color: var(--blue); display: block; font-size: 13px; margin-bottom: 1px; }
+.update-banner span { font-size: 12px; color: var(--text2); flex: 1; line-height: 1.4; }
+.update-banner-btn { background: var(--blue); color: #0f0f0f; border: none; border-radius: 8px; padding: 6px 12px; font-size: 12px; font-weight: 600; cursor: pointer; white-space: nowrap; }
 .sheet-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 200; display: flex; align-items: flex-end; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
 .sheet-overlay.open { opacity: 1; pointer-events: all; }
 .sheet { background: var(--bg2); border-radius: 20px 20px 0 0; padding: 0 20px calc(30px + var(--safe-bottom)); width: 100%; max-height: 90vh; overflow-y: auto; transform: translateY(30px); transition: transform 0.25s ease; }
@@ -157,8 +122,6 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); font-family:
 .pay-info-box { background: var(--bg3); border-radius: var(--r-sm); padding: 12px 14px; margin-bottom: 16px; }
 .pay-info-box strong { font-size: 15px; display: block; margin-bottom: 3px; }
 .pay-info-box span { font-size: 12px; color: var(--text2); font-family: 'DM Mono', monospace; }
-
-/* Confirm dialog */
 .confirm-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 300; display: flex; align-items: center; justify-content: center; padding: 20px; opacity: 0; pointer-events: none; transition: opacity 0.15s; }
 .confirm-overlay.open { opacity: 1; pointer-events: all; }
 .confirm-box { background: var(--bg2); border: 1px solid var(--line2); border-radius: var(--r); padding: 24px 20px; width: 100%; max-width: 300px; }
@@ -167,17 +130,27 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); font-family:
 .confirm-btns { display: flex; gap: 10px; }
 .confirm-no { flex: 1; padding: 12px; border: 1px solid var(--line2); border-radius: var(--r-sm); background: transparent; color: var(--text2); font-family: 'DM Sans', sans-serif; font-size: 13px; cursor: pointer; }
 .confirm-yes { flex: 1; padding: 12px; border: none; border-radius: var(--r-sm); background: var(--red); color: #fff; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; }
-
-/* Overview chart bar */
 .ov-item { margin-bottom: 12px; }
 .ov-item-hd { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px; font-size: 13px; }
 .ov-item-hd .name { color: var(--text); }
 .ov-item-hd .pct { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text3); }
-
-/* Total payoff estimate */
 .payoff-card { background: var(--bg3); border-radius: var(--r); padding: 14px 16px; margin-top: 14px; display: flex; justify-content: space-between; align-items: center; }
 .payoff-label { font-size: 12px; color: var(--text2); }
 .payoff-value { font-family: 'DM Mono', monospace; font-size: 14px; color: var(--accent); }
+/* Fixed expenses styles */
+.exp-card { background: var(--bg2); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; margin-bottom: 10px; }
+.exp-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 8px; }
+.exp-name { font-size: 15px; font-weight: 500; color: var(--text); }
+.exp-cat { display: inline-block; margin-top: 4px; font-size: 10px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; background: rgba(176,132,245,0.15); color: var(--purple); }
+.exp-amount { font-family: 'DM Mono', monospace; font-size: 15px; color: var(--purple); }
+.exp-meta { font-size: 11px; color: var(--text3); font-family: 'DM Mono', monospace; margin-bottom: 10px; }
+.exp-actions { display: flex; gap: 8px; padding-top: 10px; border-top: 1px solid var(--line); }
+.exp-hist { margin-top: 8px; }
+.exp-hist-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 12px; }
+.exp-hist-row:last-child { border-bottom: none; }
+.exp-hist-date { color: var(--text3); font-family: 'DM Mono', monospace; }
+.exp-hist-amt { color: var(--purple); font-family: 'DM Mono', monospace; }
+.exp-hist-note { color: var(--text2); font-size: 11px; }
 </style>
 </head>
 <body>
@@ -186,11 +159,15 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); font-family:
     <span class="topbar-title">💰 Debt Tracker</span>
     <span class="topbar-date" id="today"></span>
   </div>
-
   <div class="scroll-area" id="scroll-area">
 
     <!-- OVERVIEW TAB -->
     <div id="tab-overview">
+      <div id="update-banner" class="update-banner" onclick="applyUpdate()">
+        <svg viewBox="0 0 24 24"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+        <span><strong>Update available!</strong>Tap to get the latest version</span>
+        <button class="update-banner-btn" onclick="applyUpdate()">Refresh</button>
+      </div>
       <div id="install-banner" class="install-banner" style="display:none" onclick="triggerInstall()">
         <svg viewBox="0 0 24 24"><path d="M12 2v13m0 0l-4-4m4 4l4-4M2 17v2a2 2 0 002 2h16a2 2 0 002-2v-2"/></svg>
         <div class="install-banner-text"><strong>Add to Home Screen</strong>Tap to install as an app on your phone</div>
@@ -198,10 +175,10 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); font-family:
       </div>
       <div class="summary-strip three">
         <div class="sum-card"><div class="sum-label">Total debt</div><div class="sum-value red" id="ov-total">RM 0</div></div>
-        <div class="sum-card"><div class="sum-label">Monthly</div><div class="sum-value" id="ov-monthly">RM 0</div></div>
-        <div class="sum-card"><div class="sum-label">Paid off</div><div class="sum-value green" id="ov-paid">RM 0</div></div>
+        <div class="sum-card"><div class="sum-label">Monthly debt</div><div class="sum-value" id="ov-monthly">RM 0</div></div>
+        <div class="sum-card"><div class="sum-label">Expenses</div><div class="sum-value purple" id="ov-expenses">RM 0</div></div>
       </div>
-      <div class="section-hd"><h2>Debt breakdown</h2></div>
+      <div class="section-hd"><h2>Debt progress</h2></div>
       <div id="ov-list"></div>
     </div>
 
@@ -209,6 +186,16 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); font-family:
     <div id="tab-debts" style="display:none">
       <div class="section-hd"><h2>My debts</h2><button class="add-btn" onclick="openAddSheet()">+ Add</button></div>
       <div id="debts-list"></div>
+    </div>
+
+    <!-- EXPENSES TAB -->
+    <div id="tab-expenses" style="display:none">
+      <div class="section-hd"><h2>Fixed expenses</h2><button class="add-btn" onclick="openAddExpSheet()">+ Add</button></div>
+      <div class="summary-strip" style="margin-bottom:16px">
+        <div class="sum-card"><div class="sum-label">This month</div><div class="sum-value purple" id="exp-this-month">RM 0</div></div>
+        <div class="sum-card"><div class="sum-label">Last month</div><div class="sum-value" id="exp-last-month">RM 0</div></div>
+      </div>
+      <div id="expenses-list"></div>
     </div>
 
     <!-- BUDGET TAB -->
@@ -241,8 +228,12 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); font-family:
       <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
       Debts
     </button>
+    <button class="nav-btn" onclick="showTab('expenses')" id="nav-expenses">
+      <svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+      Expenses
+    </button>
     <button class="nav-btn" onclick="showTab('budget')" id="nav-budget">
-      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
       Budget
     </button>
     <button class="nav-btn" onclick="showTab('history')" id="nav-history">
@@ -281,6 +272,35 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); font-family:
   </div>
 </div>
 
+<!-- EDIT DEBT SHEET -->
+<div class="sheet-overlay" id="edit-sheet" onclick="sheetOutsideClick(event,'edit-sheet')">
+  <div class="sheet">
+    <div class="sheet-handle"></div>
+    <h2>Edit debt</h2>
+    <div class="form-group"><label>Name</label><input type="text" id="e-name"></div>
+    <div class="form-group"><label>Type</label>
+      <select id="e-type">
+        <option value="loan">Personal Loan</option>
+        <option value="card">Credit Card</option>
+        <option value="car">Car Loan</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Original (RM)</label><input type="number" id="e-original" inputmode="decimal"></div>
+      <div class="form-group"><label>Remaining (RM)</label><input type="number" id="e-remaining" inputmode="decimal"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Monthly (RM)</label><input type="number" id="e-monthly" inputmode="decimal"></div>
+      <div class="form-group"><label>Rate (% p.a.)</label><input type="number" id="e-rate" inputmode="decimal"></div>
+    </div>
+    <div class="sheet-btns">
+      <button class="sheet-cancel" onclick="closeSheet('edit-sheet')">Cancel</button>
+      <button class="sheet-submit" onclick="saveEdit()">Save changes</button>
+    </div>
+  </div>
+</div>
+
 <!-- PAY SHEET -->
 <div class="sheet-overlay" id="pay-sheet" onclick="sheetOutsideClick(event,'pay-sheet')">
   <div class="sheet">
@@ -297,32 +317,66 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); font-family:
   </div>
 </div>
 
-
-<!-- EDIT DEBT SHEET -->
-<div class="sheet-overlay" id="edit-sheet" onclick="sheetOutsideClick(event,'edit-sheet')">
+<!-- ADD EXPENSE SHEET -->
+<div class="sheet-overlay" id="add-exp-sheet" onclick="sheetOutsideClick(event,'add-exp-sheet')">
   <div class="sheet">
     <div class="sheet-handle"></div>
-    <h2>Edit debt</h2>
-    <div class="form-group"><label>Name</label><input type="text" id="e-name" placeholder="e.g. CIMB Personal Loan"></div>
-    <div class="form-group"><label>Type</label>
-      <select id="e-type">
-        <option value="loan">Personal Loan</option>
-        <option value="card">Credit Card</option>
-        <option value="car">Car Loan</option>
+    <h2>Add fixed expense</h2>
+    <div class="form-group"><label>Name</label><input type="text" id="ex-name" placeholder="e.g. TNB Electric Bill"></div>
+    <div class="form-group"><label>Category</label>
+      <select id="ex-cat">
+        <option value="utilities">Utilities</option>
+        <option value="internet">Internet / Phone</option>
+        <option value="insurance">Insurance</option>
+        <option value="subscription">Subscription</option>
+        <option value="rent">Rent / Maintenance</option>
         <option value="other">Other</option>
       </select>
     </div>
-    <div class="form-row">
-      <div class="form-group"><label>Original (RM)</label><input type="number" id="e-original" placeholder="0.00" inputmode="decimal"></div>
-      <div class="form-group"><label>Remaining (RM)</label><input type="number" id="e-remaining" placeholder="0.00" inputmode="decimal"></div>
-    </div>
-    <div class="form-row">
-      <div class="form-group"><label>Monthly (RM)</label><input type="number" id="e-monthly" placeholder="0.00" inputmode="decimal"></div>
-      <div class="form-group"><label>Rate (% p.a.)</label><input type="number" id="e-rate" placeholder="0.0" inputmode="decimal"></div>
-    </div>
+    <div class="form-group"><label>Budget / Typical amount (RM)</label><input type="number" id="ex-budget" placeholder="0.00" inputmode="decimal"></div>
     <div class="sheet-btns">
-      <button class="sheet-cancel" onclick="closeSheet('edit-sheet')">Cancel</button>
-      <button class="sheet-submit" onclick="saveEdit()">Save changes</button>
+      <button class="sheet-cancel" onclick="closeSheet('add-exp-sheet')">Cancel</button>
+      <button class="sheet-submit" onclick="addExpense()">Add Expense</button>
+    </div>
+  </div>
+</div>
+
+<!-- EDIT EXPENSE SHEET -->
+<div class="sheet-overlay" id="edit-exp-sheet" onclick="sheetOutsideClick(event,'edit-exp-sheet')">
+  <div class="sheet">
+    <div class="sheet-handle"></div>
+    <h2>Edit expense</h2>
+    <div class="form-group"><label>Name</label><input type="text" id="ee-name"></div>
+    <div class="form-group"><label>Category</label>
+      <select id="ee-cat">
+        <option value="utilities">Utilities</option>
+        <option value="internet">Internet / Phone</option>
+        <option value="insurance">Insurance</option>
+        <option value="subscription">Subscription</option>
+        <option value="rent">Rent / Maintenance</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="form-group"><label>Budget / Typical amount (RM)</label><input type="number" id="ee-budget" inputmode="decimal"></div>
+    <div class="sheet-btns">
+      <button class="sheet-cancel" onclick="closeSheet('edit-exp-sheet')">Cancel</button>
+      <button class="sheet-submit" onclick="saveEditExp()">Save changes</button>
+    </div>
+  </div>
+</div>
+
+<!-- LOG EXPENSE SHEET -->
+<div class="sheet-overlay" id="log-exp-sheet" onclick="sheetOutsideClick(event,'log-exp-sheet')">
+  <div class="sheet">
+    <div class="sheet-handle"></div>
+    <h2>Log payment</h2>
+    <div class="pay-info-box" id="log-exp-info"></div>
+    <div class="form-group"><label>Amount paid (RM)</label><input type="number" id="ex-pay-amt" inputmode="decimal"></div>
+    <div class="form-group"><label>Date</label><input type="date" id="ex-pay-date"></div>
+    <div class="form-group"><label>Note (optional)</label><input type="text" id="ex-pay-note" placeholder="e.g. March bill"></div>
+    <div class="sheet-btns">
+      <button class="sheet-cancel" onclick="closeSheet('log-exp-sheet')">Cancel</button>
+      <button class="sheet-submit" onclick="logExpPayment()">Log</button>
     </div>
   </div>
 </div>
@@ -330,8 +384,8 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); font-family:
 <!-- CONFIRM -->
 <div class="confirm-overlay" id="confirm-overlay">
   <div class="confirm-box">
-    <h3>Remove debt?</h3>
-    <p>This will delete the debt and all its history. This cannot be undone.</p>
+    <h3 id="confirm-title">Remove?</h3>
+    <p id="confirm-msg">This cannot be undone.</p>
     <div class="confirm-btns">
       <button class="confirm-no" onclick="closeConfirm()">Cancel</button>
       <button class="confirm-yes" id="confirm-yes-btn">Remove</button>
@@ -340,19 +394,16 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); font-family:
 </div>
 
 <script>
-// --- State ---
-let debts = [];
-let payments = [];
-let income = 0;
-let payTarget = null;
-let deferredPrompt = null;
-let currentTab = 'overview';
+let debts = [], payments = [], expenses = [], expPayments = [], income = 0;
+let payTarget = null, editTarget = null, editExpTarget = null, logExpTarget = null;
+let deferredPrompt = null, currentTab = 'overview', swRegistration = null;
 
-// --- Persist ---
 function save() {
   try {
     localStorage.setItem('dt_debts', JSON.stringify(debts));
     localStorage.setItem('dt_payments', JSON.stringify(payments));
+    localStorage.setItem('dt_expenses', JSON.stringify(expenses));
+    localStorage.setItem('dt_exp_payments', JSON.stringify(expPayments));
     localStorage.setItem('dt_income', income);
   } catch(e) {}
 }
@@ -360,279 +411,320 @@ function load() {
   try {
     debts = JSON.parse(localStorage.getItem('dt_debts') || '[]');
     payments = JSON.parse(localStorage.getItem('dt_payments') || '[]');
+    expenses = JSON.parse(localStorage.getItem('dt_expenses') || '[]');
+    expPayments = JSON.parse(localStorage.getItem('dt_exp_payments') || '[]');
     income = parseFloat(localStorage.getItem('dt_income') || '0');
-  } catch(e) { debts = []; payments = []; income = 0; }
+  } catch(e) { debts=[]; payments=[]; expenses=[]; expPayments=[]; income=0; }
 }
-function saveIncome() {
-  income = parseFloat(document.getElementById('income-val').value) || 0;
-  save();
-}
+function saveIncome() { income = parseFloat(document.getElementById('income-val').value)||0; save(); }
 
-// --- Format ---
-const fmt = v => 'RM ' + Number(v).toLocaleString('en-MY', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
-const fmtDate = s => { const d = new Date(s); return d.toLocaleDateString('en-MY', { day:'numeric', month:'short', year:'numeric' }); };
+const fmt = v => 'RM ' + Number(v).toLocaleString('en-MY', {minimumFractionDigits:0,maximumFractionDigits:0});
+const fmtDate = s => new Date(s).toLocaleDateString('en-MY', {day:'numeric',month:'short',year:'numeric'});
+const nowYM = () => { const d=new Date(); return d.getFullYear()+'-'+(d.getMonth()+1).toString().padStart(2,'0'); };
+const lastYM = () => { const d=new Date(); d.setMonth(d.getMonth()-1); return d.getFullYear()+'-'+(d.getMonth()+1).toString().padStart(2,'0'); };
 
-// --- Tabs ---
 function showTab(t) {
-  ['overview','debts','budget','history'].forEach(id => {
-    document.getElementById('tab-'+id).style.display = id===t ? 'block' : 'none';
+  ['overview','debts','expenses','budget','history'].forEach(id => {
+    document.getElementById('tab-'+id).style.display = id===t?'block':'none';
     document.getElementById('nav-'+id).classList.toggle('active', id===t);
   });
   currentTab = t;
   document.getElementById('scroll-area').scrollTop = 0;
   if(t==='overview') renderOverview();
   if(t==='debts') renderDebts();
+  if(t==='expenses') renderExpenses();
   if(t==='budget') renderBudget();
   if(t==='history') renderHistory();
 }
 
-// --- Overview ---
 function renderOverview() {
   const total = debts.reduce((s,d)=>s+d.remaining,0);
   const monthly = debts.reduce((s,d)=>s+d.monthly,0);
-  const paid = debts.reduce((s,d)=>s+(d.original-d.remaining),0);
+  const ym = nowYM();
+  const expThisMonth = expPayments.filter(p=>p.date.startsWith(ym)).reduce((s,p)=>s+p.amount,0);
   document.getElementById('ov-total').textContent = fmt(total);
   document.getElementById('ov-monthly').textContent = fmt(monthly);
-  document.getElementById('ov-paid').textContent = fmt(paid);
-
+  document.getElementById('ov-expenses').textContent = fmt(expThisMonth);
   const list = document.getElementById('ov-list');
   if(!debts.length) {
-    list.innerHTML = `<div class="empty"><svg viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-7v2m0-10v5"/></svg><p>No debts added yet</p><small>Go to the Debts tab to get started</small></div>`;
+    list.innerHTML = '<div class="empty"><svg viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-7v2m0-10v5"/></svg><p>No debts added yet</p><small>Go to the Debts tab to get started</small></div>';
     return;
   }
   list.innerHTML = debts.map(d => {
     const pct = Math.round(((d.original-d.remaining)/d.original)*100);
-    const fc = pct>=60?'':'pct>=30?warn:low';
-    const fillCls = pct>=60 ? '' : pct>=30 ? 'warn' : 'low';
-    return `<div class="ov-item">
-      <div class="ov-item-hd"><span class="name">${d.name}</span><span class="pct">${pct}% paid · ${fmt(d.remaining)} left</span></div>
-      <div class="progress-track"><div class="progress-fill ${fillCls}" style="width:${pct}%"></div></div>
-    </div>`;
+    const fillCls = pct>=60?'':pct>=30?'warn':'low';
+    return `<div class="ov-item"><div class="ov-item-hd"><span class="name">${d.name}</span><span class="pct">${pct}% paid · ${fmt(d.remaining)} left</span></div><div class="progress-track"><div class="progress-fill ${fillCls}" style="width:${pct}%"></div></div></div>`;
   }).join('') + (() => {
-    const months = Math.max(...debts.map(d => d.monthly>0 ? Math.ceil(d.remaining/d.monthly) : 0));
-    if(months <= 0) return '';
-    const yr = Math.floor(months/12); const mo = months%12;
-    const label = yr>0 ? `${yr}y ${mo}mo` : `${mo} months`;
-    return `<div class="payoff-card"><span class="payoff-label">Longest payoff estimate</span><span class="payoff-value">~${label}</span></div>`;
+    const months = Math.max(...debts.map(d=>d.monthly>0?Math.ceil(d.remaining/d.monthly):0));
+    if(months<=0) return '';
+    const yr=Math.floor(months/12),mo=months%12;
+    return `<div class="payoff-card"><span class="payoff-label">Longest payoff estimate</span><span class="payoff-value">~${yr>0?yr+'y '+mo+'mo':mo+' months'}</span></div>`;
   })();
-
-  // install banner logic
   const banner = document.getElementById('install-banner');
   if(deferredPrompt && !localStorage.getItem('dt_banner_dismissed')) banner.style.display='flex';
 }
 
-// --- Debts ---
 function tagClass(t) { return {loan:'tag-loan',card:'tag-card',car:'tag-car',other:'tag-other'}[t]||'tag-other'; }
 function tagLabel(t) { return {loan:'Personal Loan',card:'Credit Card',car:'Car Loan',other:'Other'}[t]||t; }
 
 function renderDebts() {
   const el = document.getElementById('debts-list');
-  if(!debts.length) {
-    el.innerHTML = `<div class="empty"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg><p>No debts added yet</p><small>Tap + Add to start tracking</small></div>`;
-    return;
-  }
+  if(!debts.length) { el.innerHTML='<div class="empty"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg><p>No debts added yet</p><small>Tap + Add to start tracking</small></div>'; return; }
   el.innerHTML = debts.map(d => {
     const pct = Math.round(((d.original-d.remaining)/d.original)*100);
-    const fillCls = pct>=60 ? '' : pct>=30 ? 'warn' : 'low';
+    const fillCls = pct>=60?'':pct>=30?'warn':'low';
     return `<div class="debt-card">
-      <div class="dc-top">
-        <div>
-          <div class="dc-name">${d.name}</div>
-          <span class="dc-tag ${tagClass(d.type)}">${tagLabel(d.type)}</span>
-        </div>
-        <div class="dc-amount">${fmt(d.remaining)}</div>
-      </div>
-      <div class="dc-progress">
-        <div class="progress-track"><div class="progress-fill ${fillCls}" style="width:${pct}%"></div></div>
-        <div class="progress-labels"><span>${fmt(d.original-d.remaining)} paid</span><span>${pct}%</span></div>
-      </div>
-      <div class="dc-meta">
-        <span>📅 ${fmt(d.monthly)}/mo</span>
-        <span>📊 ${d.rate}% p.a.</span>
-      </div>
+      <div class="dc-top"><div><div class="dc-name">${d.name}</div><span class="dc-tag ${tagClass(d.type)}">${tagLabel(d.type)}</span></div><div class="dc-amount">${fmt(d.remaining)}</div></div>
+      <div class="dc-progress"><div class="progress-track"><div class="progress-fill ${fillCls}" style="width:${pct}%"></div></div><div class="progress-labels"><span>${fmt(d.original-d.remaining)} paid</span><span>${pct}%</span></div></div>
+      <div class="dc-meta"><span>📅 ${fmt(d.monthly)}/mo</span><span>📊 ${d.rate}% p.a.</span></div>
       <div class="dc-actions">
-        <button class="dc-btn primary" onclick="openPaySheet(${d.id})">+ Record payment</button>
+        <button class="dc-btn primary" onclick="openPaySheet(${d.id})">+ Pay</button>
         <button class="dc-btn" onclick="openEditSheet(${d.id})">✏️ Edit</button>
-        <button class="dc-btn danger" onclick="confirmDelete(${d.id})">Remove</button>
-      </div>
-    </div>`;
+        <button class="dc-btn danger" onclick="confirmDelete(${d.id},'debt')">Remove</button>
+      </div></div>`;
   }).join('');
 }
 
-// --- Budget ---
+function catLabel(c) { return {utilities:'Utilities',internet:'Internet/Phone',insurance:'Insurance',subscription:'Subscription',rent:'Rent/Maint.',other:'Other'}[c]||c; }
+
+function renderExpenses() {
+  const ym = nowYM(), lym = lastYM();
+  const thisMonth = expPayments.filter(p=>p.date.startsWith(ym)).reduce((s,p)=>s+p.amount,0);
+  const lastMonth = expPayments.filter(p=>p.date.startsWith(lym)).reduce((s,p)=>s+p.amount,0);
+  document.getElementById('exp-this-month').textContent = fmt(thisMonth);
+  document.getElementById('exp-last-month').textContent = fmt(lastMonth);
+  const el = document.getElementById('expenses-list');
+  if(!expenses.length) { el.innerHTML='<div class="empty"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg><p>No expenses added yet</p><small>Tap + Add to track your monthly bills</small></div>'; return; }
+  el.innerHTML = expenses.map(ex => {
+    const recent = expPayments.filter(p=>p.expId===ex.id).slice(-3).reverse();
+    const lastPaid = recent[0];
+    const lastAmt = lastPaid ? fmt(lastPaid.amount) : '—';
+    const lastDt = lastPaid ? fmtDate(lastPaid.date) : 'Not yet paid';
+    const histRows = recent.map(p=>`<div class="exp-hist-row"><span class="exp-hist-date">${fmtDate(p.date)}</span><span class="exp-hist-note">${p.note||'—'}</span><span class="exp-hist-amt">${fmt(p.amount)}</span></div>`).join('');
+    return `<div class="exp-card">
+      <div class="exp-top"><div><div class="exp-name">${ex.name}</div><span class="exp-cat">${catLabel(ex.cat)}</span></div><div class="exp-amount">${ex.budget?fmt(ex.budget):'—'}<span style="font-size:10px;color:var(--text3)"> budget</span></div></div>
+      <div class="exp-meta">Last paid: ${lastDt} · ${lastAmt}</div>
+      ${histRows?'<div class="exp-hist">'+histRows+'</div>':''}
+      <div class="exp-actions">
+        <button class="dc-btn primary" onclick="openLogExpSheet(${ex.id})">+ Log payment</button>
+        <button class="dc-btn" onclick="openEditExpSheet(${ex.id})">✏️ Edit</button>
+        <button class="dc-btn danger" onclick="confirmDelete(${ex.id},'expense')">Remove</button>
+      </div></div>`;
+  }).join('');
+}
+
 function renderBudget() {
   const incomeEl = document.getElementById('income-val');
-  if(incomeEl && income > 0) incomeEl.value = income;
+  if(incomeEl && income>0) incomeEl.value = income;
   const el = document.getElementById('budget-content');
-  if(!income) {
-    el.innerHTML = `<div class="empty" style="padding:30px 0"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg><p>Enter your income above</p><small>See how debt fits your budget</small></div>`;
-    return;
-  }
+  if(!income) { el.innerHTML='<div class="empty" style="padding:30px 0"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg><p>Enter your income above</p><small>See how your money is allocated</small></div>'; return; }
   const totalDebt = debts.reduce((s,d)=>s+d.monthly,0);
-  const living = Math.round(income * 0.50);
-  const savings = Math.max(0, income - totalDebt - living);
-  const dti = income > 0 ? Math.round((totalDebt/income)*100) : 0;
-  const debtPct = Math.min(100, Math.round((totalDebt/income)*100));
-  const livPct = Math.min(100-debtPct, Math.round((living/income)*100));
-  const savPct = Math.max(0, 100-debtPct-livPct);
-
+  const ym = nowYM();
+  const expBudget = expenses.reduce((s,e)=>s+(e.budget||0),0);
+  const savings = Math.max(0, income - totalDebt - expBudget);
+  const dti = Math.round((totalDebt/income)*100);
+  const debtPct = Math.min(100,Math.round((totalDebt/income)*100));
+  const expPct = Math.min(100-debtPct,Math.round((expBudget/income)*100));
+  const savPct = Math.max(0,100-debtPct-expPct);
   const statusClass = dti>40?'bad':dti>30?'warn':'good';
   const statusMsg = dti>40?'⚠️ High — consider paying down faster':dti>30?'⚡ Moderate — keep an eye on this':'✅ Good — within healthy range';
-
   el.innerHTML = `
     <div class="budget-card">
       <div class="budget-row"><span class="label">Net income</span><span class="val accent">${fmt(income)}</span></div>
       <div class="budget-row"><span class="label">Debt instalments</span><span class="val red">${fmt(totalDebt)}</span></div>
-      <div class="budget-row"><span class="label">Living expenses (est. 50%)</span><span class="val">${fmt(living)}</span></div>
+      <div class="budget-row"><span class="label">Fixed expenses (budget)</span><span class="val purple">${fmt(expBudget)}</span></div>
       <div class="budget-row"><span class="label">Available for savings</span><span class="val green">${fmt(savings)}</span></div>
       <div class="budget-bar-wrap">
         <div class="budget-bar-seg" style="width:${debtPct}%;background:var(--red)"></div>
-        <div class="budget-bar-seg" style="width:${livPct}%;background:var(--blue)"></div>
+        <div class="budget-bar-seg" style="width:${expPct}%;background:var(--purple)"></div>
         <div class="budget-bar-seg" style="width:${savPct}%;background:var(--green)"></div>
       </div>
       <div class="budget-legend">
         <span class="legend-item"><span class="legend-dot" style="background:var(--red)"></span>Debt ${debtPct}%</span>
-        <span class="legend-item"><span class="legend-dot" style="background:var(--blue)"></span>Living ${livPct}%</span>
+        <span class="legend-item"><span class="legend-dot" style="background:var(--purple)"></span>Expenses ${expPct}%</span>
         <span class="legend-item"><span class="legend-dot" style="background:var(--green)"></span>Savings ${savPct}%</span>
       </div>
-      <div class="dti-status ${statusClass}">${statusMsg} &nbsp;·&nbsp; DTI: ${dti}%</div>
-    </div>
-    ${debts.map(d=>`<div class="budget-card" style="padding:12px 16px"><div class="budget-row"><span class="label">${d.name}</span><span class="val">${fmt(d.monthly)}/mo</span></div></div>`).join('')}
-  `;
+      <div class="dti-status ${statusClass}">${statusMsg} · DTI: ${dti}%</div>
+    </div>`;
 }
 
-// --- History ---
 function renderHistory() {
   const el = document.getElementById('history-content');
-  if(!payments.length) {
-    el.innerHTML = `<div class="empty"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 109 9"/><path d="M3 3v9h9"/></svg><p>No payments recorded yet</p></div>`;
-    return;
-  }
-  const sorted = [...payments].reverse();
-  el.innerHTML = `<div class="budget-card">${sorted.map(p=>`
+  const all = [
+    ...payments.map(p=>{return{...p,type:'debt'}}),
+    ...expPayments.map(p=>{return{...p,type:'expense'}})
+  ].sort((a,b)=>b.date.localeCompare(a.date));
+  if(!all.length) { el.innerHTML='<div class="empty"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 109 9"/><path d="M3 3v9h9"/></svg><p>No payments recorded yet</p></div>'; return; }
+  el.innerHTML = `<div class="budget-card">${all.map(p=>`
     <div class="hist-item">
       <div class="hist-left">
-        <span class="hist-name">${p.name}${p.note?` <span style="color:var(--text3);font-size:11px">· ${p.note}</span>`:''}</span>
+        <span class="hist-name">${p.name}${p.note?' <span style="color:var(--text3);font-size:11px">· '+p.note+'</span>':''}${p.type==='expense'?' <span style="font-size:10px;background:rgba(176,132,245,0.15);color:var(--purple);padding:1px 5px;border-radius:3px">expense</span>':''}
+        </span>
         <span class="hist-date">${fmtDate(p.date)}</span>
       </div>
-      <span class="hist-amount">+${fmt(p.amount)}</span>
+      <span class="hist-amount" style="color:${p.type==='expense'?'var(--purple)':'var(--green)'}">+${fmt(p.amount)}</span>
     </div>`).join('')}</div>`;
 }
 
-// --- Add debt ---
 function openAddSheet() {
   ['f-name','f-original','f-remaining','f-monthly','f-rate'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('f-type').value='loan';
   openSheet('add-sheet');
 }
 function addDebt() {
-  const name = document.getElementById('f-name').value.trim();
-  const original = parseFloat(document.getElementById('f-original').value);
-  const remaining = parseFloat(document.getElementById('f-remaining').value);
-  const monthly = parseFloat(document.getElementById('f-monthly').value);
-  const rate = parseFloat(document.getElementById('f-rate').value)||0;
-  const type = document.getElementById('f-type').value;
-  if(!name||!original||!remaining||!monthly) { alert('Please fill in all required fields.'); return; }
-  debts.push({ id: Date.now(), name, type, original, remaining, monthly, rate });
-  save();
-  closeSheet('add-sheet');
-  renderDebts();
+  const name=document.getElementById('f-name').value.trim();
+  const original=parseFloat(document.getElementById('f-original').value);
+  const remaining=parseFloat(document.getElementById('f-remaining').value);
+  const monthly=parseFloat(document.getElementById('f-monthly').value);
+  const rate=parseFloat(document.getElementById('f-rate').value)||0;
+  const type=document.getElementById('f-type').value;
+  if(!name||!original||!remaining||!monthly){alert('Please fill in all required fields.');return;}
+  debts.push({id:Date.now(),name,type,original,remaining,monthly,rate});
+  save(); closeSheet('add-sheet'); renderDebts();
 }
 
-// --- Pay ---
-function openPaySheet(id) {
-  payTarget = debts.find(d=>d.id===id);
-  document.getElementById('pay-info-box').innerHTML = `<strong>${payTarget.name}</strong><span>${fmt(payTarget.remaining)} remaining · ${fmt(payTarget.monthly)}/mo suggested</span>`;
-  document.getElementById('f-pay-amt').value = payTarget.monthly;
-  document.getElementById('f-pay-date').value = new Date().toISOString().split('T')[0];
-  document.getElementById('f-pay-note').value = '';
-  openSheet('pay-sheet');
-}
-function recordPay() {
-  const amount = parseFloat(document.getElementById('f-pay-amt').value);
-  const date = document.getElementById('f-pay-date').value;
-  const note = document.getElementById('f-pay-note').value.trim();
-  if(!amount||!date) { alert('Please enter amount and date.'); return; }
-  const d = debts.find(x=>x.id===payTarget.id);
-  d.remaining = Math.max(0, d.remaining - amount);
-  payments.push({ id: Date.now(), debtId: d.id, name: d.name, amount, date, note });
-  save();
-  closeSheet('pay-sheet');
-  renderDebts();
-}
-
-
-// --- Edit debt ---
-let editTarget = null;
 function openEditSheet(id) {
-  editTarget = debts.find(d=>d.id===id);
-  document.getElementById('e-name').value = editTarget.name;
-  document.getElementById('e-type').value = editTarget.type;
-  document.getElementById('e-original').value = editTarget.original;
-  document.getElementById('e-remaining').value = editTarget.remaining;
-  document.getElementById('e-monthly').value = editTarget.monthly;
-  document.getElementById('e-rate').value = editTarget.rate;
+  editTarget=debts.find(d=>d.id===id);
+  document.getElementById('e-name').value=editTarget.name;
+  document.getElementById('e-type').value=editTarget.type;
+  document.getElementById('e-original').value=editTarget.original;
+  document.getElementById('e-remaining').value=editTarget.remaining;
+  document.getElementById('e-monthly').value=editTarget.monthly;
+  document.getElementById('e-rate').value=editTarget.rate;
   openSheet('edit-sheet');
 }
 function saveEdit() {
-  const name = document.getElementById('e-name').value.trim();
-  const original = parseFloat(document.getElementById('e-original').value);
-  const remaining = parseFloat(document.getElementById('e-remaining').value);
-  const monthly = parseFloat(document.getElementById('e-monthly').value);
-  const rate = parseFloat(document.getElementById('e-rate').value)||0;
-  const type = document.getElementById('e-type').value;
-  if(!name||!original||!remaining||!monthly) { alert('Please fill in all required fields.'); return; }
-  const d = debts.find(x=>x.id===editTarget.id);
-  d.name = name; d.type = type; d.original = original;
-  d.remaining = remaining; d.monthly = monthly; d.rate = rate;
-  // Update payment history names too
-  payments.forEach(p => { if(p.debtId === d.id) p.name = name; });
-  save();
-  closeSheet('edit-sheet');
-  renderDebts();
+  const name=document.getElementById('e-name').value.trim();
+  const original=parseFloat(document.getElementById('e-original').value);
+  const remaining=parseFloat(document.getElementById('e-remaining').value);
+  const monthly=parseFloat(document.getElementById('e-monthly').value);
+  const rate=parseFloat(document.getElementById('e-rate').value)||0;
+  const type=document.getElementById('e-type').value;
+  if(!name||!original||!remaining||!monthly){alert('Please fill in all required fields.');return;}
+  const d=debts.find(x=>x.id===editTarget.id);
+  d.name=name;d.type=type;d.original=original;d.remaining=remaining;d.monthly=monthly;d.rate=rate;
+  payments.forEach(p=>{if(p.debtId===d.id) p.name=name;});
+  save(); closeSheet('edit-sheet'); renderDebts();
   if(currentTab==='overview') renderOverview();
 }
 
-// --- Delete ---
-function confirmDelete(id) {
-  const overlay = document.getElementById('confirm-overlay');
+function openPaySheet(id) {
+  payTarget=debts.find(d=>d.id===id);
+  document.getElementById('pay-info-box').innerHTML=`<strong>${payTarget.name}</strong><span>${fmt(payTarget.remaining)} remaining · ${fmt(payTarget.monthly)}/mo suggested</span>`;
+  document.getElementById('f-pay-amt').value=payTarget.monthly;
+  document.getElementById('f-pay-date').value=new Date().toISOString().split('T')[0];
+  document.getElementById('f-pay-note').value='';
+  openSheet('pay-sheet');
+}
+function recordPay() {
+  const amount=parseFloat(document.getElementById('f-pay-amt').value);
+  const date=document.getElementById('f-pay-date').value;
+  const note=document.getElementById('f-pay-note').value.trim();
+  if(!amount||!date){alert('Please enter amount and date.');return;}
+  const d=debts.find(x=>x.id===payTarget.id);
+  d.remaining=Math.max(0,d.remaining-amount);
+  payments.push({id:Date.now(),debtId:d.id,name:d.name,amount,date,note});
+  save(); closeSheet('pay-sheet'); renderDebts();
+}
+
+function openAddExpSheet() {
+  ['ex-name','ex-budget'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('ex-cat').value='utilities';
+  openSheet('add-exp-sheet');
+}
+function addExpense() {
+  const name=document.getElementById('ex-name').value.trim();
+  const cat=document.getElementById('ex-cat').value;
+  const budget=parseFloat(document.getElementById('ex-budget').value)||0;
+  if(!name){alert('Please enter a name.');return;}
+  expenses.push({id:Date.now(),name,cat,budget});
+  save(); closeSheet('add-exp-sheet'); renderExpenses();
+}
+
+function openEditExpSheet(id) {
+  editExpTarget=expenses.find(e=>e.id===id);
+  document.getElementById('ee-name').value=editExpTarget.name;
+  document.getElementById('ee-cat').value=editExpTarget.cat;
+  document.getElementById('ee-budget').value=editExpTarget.budget||0;
+  openSheet('edit-exp-sheet');
+}
+function saveEditExp() {
+  const name=document.getElementById('ee-name').value.trim();
+  const cat=document.getElementById('ee-cat').value;
+  const budget=parseFloat(document.getElementById('ee-budget').value)||0;
+  if(!name){alert('Please enter a name.');return;}
+  const ex=expenses.find(x=>x.id===editExpTarget.id);
+  ex.name=name;ex.cat=cat;ex.budget=budget;
+  expPayments.forEach(p=>{if(p.expId===ex.id) p.name=name;});
+  save(); closeSheet('edit-exp-sheet'); renderExpenses();
+  if(currentTab==='budget') renderBudget();
+}
+
+function openLogExpSheet(id) {
+  logExpTarget=expenses.find(e=>e.id===id);
+  document.getElementById('log-exp-info').innerHTML=`<strong>${logExpTarget.name}</strong><span>Budget: ${logExpTarget.budget?fmt(logExpTarget.budget):'—'}</span>`;
+  document.getElementById('ex-pay-amt').value=logExpTarget.budget||'';;
+  document.getElementById('ex-pay-date').value=new Date().toISOString().split('T')[0];
+  document.getElementById('ex-pay-note').value='';
+  openSheet('log-exp-sheet');
+}
+function logExpPayment() {
+  const amount=parseFloat(document.getElementById('ex-pay-amt').value);
+  const date=document.getElementById('ex-pay-date').value;
+  const note=document.getElementById('ex-pay-note').value.trim();
+  if(!amount||!date){alert('Please enter amount and date.');return;}
+  expPayments.push({id:Date.now(),expId:logExpTarget.id,name:logExpTarget.name,amount,date,note});
+  save(); closeSheet('log-exp-sheet'); renderExpenses();
+  if(currentTab==='overview') renderOverview();
+}
+
+function confirmDelete(id,kind) {
+  const overlay=document.getElementById('confirm-overlay');
+  document.getElementById('confirm-title').textContent=kind==='expense'?'Remove expense?':'Remove debt?';
+  document.getElementById('confirm-msg').textContent='This will delete it and all its history. This cannot be undone.';
   overlay.classList.add('open');
-  document.getElementById('confirm-yes-btn').onclick = () => {
-    debts = debts.filter(d=>d.id!==id);
-    payments = payments.filter(p=>p.debtId!==id);
-    save();
-    closeConfirm();
-    renderDebts();
-    if(currentTab==='overview') renderOverview();
+  document.getElementById('confirm-yes-btn').onclick=()=>{
+    if(kind==='debt'){ debts=debts.filter(d=>d.id!==id); payments=payments.filter(p=>p.debtId!==id); }
+    else { expenses=expenses.filter(e=>e.id!==id); expPayments=expPayments.filter(p=>p.expId!==id); }
+    save(); closeConfirm();
+    if(kind==='debt'){ renderDebts(); if(currentTab==='overview') renderOverview(); }
+    else { renderExpenses(); if(currentTab==='budget') renderBudget(); }
   };
 }
 function closeConfirm() { document.getElementById('confirm-overlay').classList.remove('open'); }
-
-// --- Sheet helpers ---
 function openSheet(id) { document.getElementById(id).classList.add('open'); }
 function closeSheet(id) { document.getElementById(id).classList.remove('open'); }
-function sheetOutsideClick(e, id) { if(e.target===document.getElementById(id)) closeSheet(id); }
+function sheetOutsideClick(e,id) { if(e.target===document.getElementById(id)) closeSheet(id); }
 
-// --- PWA install ---
-window.addEventListener('beforeinstallprompt', e => {
-  e.preventDefault();
-  deferredPrompt = e;
-  if(!localStorage.getItem('dt_banner_dismissed')) {
-    document.getElementById('install-banner').style.display='flex';
-  }
+window.addEventListener('beforeinstallprompt', e=>{
+  e.preventDefault(); deferredPrompt=e;
+  if(!localStorage.getItem('dt_banner_dismissed')) document.getElementById('install-banner').style.display='flex';
 });
 function triggerInstall() {
-  if(deferredPrompt) { deferredPrompt.prompt(); deferredPrompt.userChoice.then(()=>{ deferredPrompt=null; document.getElementById('install-banner').style.display='none'; }); }
+  if(deferredPrompt){ deferredPrompt.prompt(); deferredPrompt.userChoice.then(()=>{deferredPrompt=null;document.getElementById('install-banner').style.display='none';});}
 }
 function dismissBanner(e) { e.stopPropagation(); document.getElementById('install-banner').style.display='none'; localStorage.setItem('dt_banner_dismissed','1'); }
 
-// --- Service worker ---
+function applyUpdate() { if(swRegistration && swRegistration.waiting){ swRegistration.waiting.postMessage({type:'SKIP_WAITING'}); } window.location.reload(); }
 
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js').then(reg=>{
+    swRegistration = reg;
+    reg.addEventListener('updatefound',()=>{
+      const newWorker=reg.installing;
+      newWorker.addEventListener('statechange',()=>{
+        if(newWorker.state==='installed' && navigator.serviceWorker.controller){
+          document.getElementById('update-banner').classList.add('show');
+        }
+      });
+    });
+  }).catch(()=>{});
+  navigator.serviceWorker.addEventListener('controllerchange',()=>window.location.reload());
+}
 
-// --- Init ---
 load();
-document.getElementById('today').textContent = new Date().toLocaleDateString('en-MY', {day:'numeric',month:'short',year:'numeric'});
-if(income > 0) document.getElementById('income-val').value = income;
+document.getElementById('today').textContent=new Date().toLocaleDateString('en-MY',{day:'numeric',month:'short',year:'numeric'});
+if(income>0) document.getElementById('income-val').value=income;
 renderOverview();
 </script>
 
@@ -650,7 +742,7 @@ renderOverview();
 
 // Inline service worker
 if('serviceWorker' in navigator) {
-  const swCode = `const CACHE = 'debt-tracker-v1';
+  const swCode = `const CACHE = 'debt-tracker-v2';
 const ASSETS = ['./index.html', './manifest.json'];
 
 self.addEventListener('install', e => {
@@ -676,5 +768,6 @@ self.addEventListener('fetch', e => {
   navigator.serviceWorker.register(swUrl).catch(()=>{});
 }
 </script>
+</body>
 </body>
 </html>
