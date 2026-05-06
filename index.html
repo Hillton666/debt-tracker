@@ -705,21 +705,46 @@ function triggerInstall() {
 }
 function dismissBanner(e) { e.stopPropagation(); document.getElementById('install-banner').style.display='none'; localStorage.setItem('dt_banner_dismissed','1'); }
 
-function applyUpdate() { if(swRegistration && swRegistration.waiting){ swRegistration.waiting.postMessage({type:'SKIP_WAITING'}); } window.location.reload(); }
+// --- Auto-update: version check ---
+const APP_VERSION = '2025-05-07-v3';
+function checkForUpdate() {
+  const seen = localStorage.getItem('dt_app_version');
+  if(seen && seen !== APP_VERSION) {
+    document.getElementById('update-banner').classList.add('show');
+  } else {
+    localStorage.setItem('dt_app_version', APP_VERSION);
+  }
+}
+function applyUpdate() {
+  localStorage.setItem('dt_app_version', APP_VERSION);
+  // Clear SW cache then reload
+  if('caches' in window) {
+    caches.keys().then(keys => Promise.all(keys.map(k => caches.delete(k)))).then(() => location.reload(true));
+  } else {
+    location.reload(true);
+  }
+}
+checkForUpdate();
 
 if('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js').then(reg=>{
-    swRegistration = reg;
-    reg.addEventListener('updatefound',()=>{
-      const newWorker=reg.installing;
-      newWorker.addEventListener('statechange',()=>{
-        if(newWorker.state==='installed' && navigator.serviceWorker.controller){
-          document.getElementById('update-banner').classList.add('show');
-        }
-      });
+  // Register inline SW via blob for offline support
+  const swCode = `
+    const CACHE='dt-cache-v3';
+    self.addEventListener('install',e=>{self.skipWaiting();});
+    self.addEventListener('activate',e=>{
+      e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));
+      self.clients.claim();
     });
-  }).catch(()=>{});
-  navigator.serviceWorker.addEventListener('controllerchange',()=>window.location.reload());
+    self.addEventListener('fetch',e=>{
+      e.respondWith(fetch(e.request).then(r=>{
+        const rc=r.clone();
+        caches.open(CACHE).then(c=>c.put(e.request,rc));
+        return r;
+      }).catch(()=>caches.match(e.request)));
+    });
+  `;
+  const blob = new Blob([swCode], {type:'application/javascript'});
+  navigator.serviceWorker.register(URL.createObjectURL(blob)).catch(()=>{});
 }
 
 load();
@@ -740,34 +765,7 @@ renderOverview();
   document.head.appendChild(link);
 })();
 
-// Inline service worker
-if('serviceWorker' in navigator) {
-  const swCode = `const CACHE = 'debt-tracker-v2';
-const ASSETS = ['./index.html', './manifest.json'];
 
-self.addEventListener('install', e => {
-  e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)));
-  self.skipWaiting();
-});
-
-self.addEventListener('activate', e => {
-  e.waitUntil(caches.keys().then(keys =>
-    Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
-  ));
-  self.clients.claim();
-});
-
-self.addEventListener('fetch', e => {
-  e.respondWith(
-    caches.match(e.request).then(r => r || fetch(e.request).catch(() => caches.match('./index.html')))
-  );
-});
-`;
-  const blob = new Blob([swCode], {type:'application/javascript'});
-  const swUrl = URL.createObjectURL(blob);
-  navigator.serviceWorker.register(swUrl).catch(()=>{});
-}
 </script>
-</body>
 </body>
 </html>
