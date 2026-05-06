@@ -297,6 +297,36 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); font-family:
   </div>
 </div>
 
+
+<!-- EDIT DEBT SHEET -->
+<div class="sheet-overlay" id="edit-sheet" onclick="sheetOutsideClick(event,'edit-sheet')">
+  <div class="sheet">
+    <div class="sheet-handle"></div>
+    <h2>Edit debt</h2>
+    <div class="form-group"><label>Name</label><input type="text" id="e-name" placeholder="e.g. CIMB Personal Loan"></div>
+    <div class="form-group"><label>Type</label>
+      <select id="e-type">
+        <option value="loan">Personal Loan</option>
+        <option value="card">Credit Card</option>
+        <option value="car">Car Loan</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Original (RM)</label><input type="number" id="e-original" placeholder="0.00" inputmode="decimal"></div>
+      <div class="form-group"><label>Remaining (RM)</label><input type="number" id="e-remaining" placeholder="0.00" inputmode="decimal"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Monthly (RM)</label><input type="number" id="e-monthly" placeholder="0.00" inputmode="decimal"></div>
+      <div class="form-group"><label>Rate (% p.a.)</label><input type="number" id="e-rate" placeholder="0.0" inputmode="decimal"></div>
+    </div>
+    <div class="sheet-btns">
+      <button class="sheet-cancel" onclick="closeSheet('edit-sheet')">Cancel</button>
+      <button class="sheet-submit" onclick="saveEdit()">Save changes</button>
+    </div>
+  </div>
+</div>
+
 <!-- CONFIRM -->
 <div class="confirm-overlay" id="confirm-overlay">
   <div class="confirm-box">
@@ -422,6 +452,7 @@ function renderDebts() {
       </div>
       <div class="dc-actions">
         <button class="dc-btn primary" onclick="openPaySheet(${d.id})">+ Record payment</button>
+        <button class="dc-btn" onclick="openEditSheet(${d.id})">✏️ Edit</button>
         <button class="dc-btn danger" onclick="confirmDelete(${d.id})">Remove</button>
       </div>
     </div>`;
@@ -528,6 +559,38 @@ function recordPay() {
   save();
   closeSheet('pay-sheet');
   renderDebts();
+}
+
+
+// --- Edit debt ---
+let editTarget = null;
+function openEditSheet(id) {
+  editTarget = debts.find(d=>d.id===id);
+  document.getElementById('e-name').value = editTarget.name;
+  document.getElementById('e-type').value = editTarget.type;
+  document.getElementById('e-original').value = editTarget.original;
+  document.getElementById('e-remaining').value = editTarget.remaining;
+  document.getElementById('e-monthly').value = editTarget.monthly;
+  document.getElementById('e-rate').value = editTarget.rate;
+  openSheet('edit-sheet');
+}
+function saveEdit() {
+  const name = document.getElementById('e-name').value.trim();
+  const original = parseFloat(document.getElementById('e-original').value);
+  const remaining = parseFloat(document.getElementById('e-remaining').value);
+  const monthly = parseFloat(document.getElementById('e-monthly').value);
+  const rate = parseFloat(document.getElementById('e-rate').value)||0;
+  const type = document.getElementById('e-type').value;
+  if(!name||!original||!remaining||!monthly) { alert('Please fill in all required fields.'); return; }
+  const d = debts.find(x=>x.id===editTarget.id);
+  d.name = name; d.type = type; d.original = original;
+  d.remaining = remaining; d.monthly = monthly; d.rate = rate;
+  // Update payment history names too
+  payments.forEach(p => { if(p.debtId === d.id) p.name = name; });
+  save();
+  closeSheet('edit-sheet');
+  renderDebts();
+  if(currentTab==='overview') renderOverview();
 }
 
 // --- Delete ---
